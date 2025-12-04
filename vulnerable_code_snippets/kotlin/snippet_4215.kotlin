@@ -1,0 +1,9 @@
+class User(var name: String, var age: Int)
+
+fun main() {
+    val user1 = User("John", 25)
+    val user2: User? = null
+
+    println(user1.name) // This will work fine
+    println(user2.name) // This will cause a NullPointerException
+}

@@ -1,0 +1,5 @@
+fun main(args: Array<String>) {
+    val userInput = readLine()!!
+    val number = userInput.toInt()
+    println(number)
+}

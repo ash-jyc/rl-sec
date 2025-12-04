@@ -1,0 +1,8 @@
+fun main(args: Array<String>) {
+    val myString: String? = null
+    if (myString.equals("Hello")) {
+        println("Strings are equal")
+    } else {
+        println("Strings are not equal")
+    }
+}

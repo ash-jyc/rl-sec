@@ -1,0 +1,11 @@
+// This is a simple class representing a student
+class Student(val name: String?) {
+    fun getNameLength(): Int? {
+        return name?.length
+    }
+}
+
+fun main() {
+    val student = Student(null)
+    println(student.getNameLength())  // This will throw a NullPointerException
+}

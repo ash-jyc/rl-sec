@@ -1,0 +1,7 @@
+// This is a simple function that takes a string as input and returns its length
+fun getStringLength(myString: String?): Int {
+    return myString.length // This line will throw a NullPointerException if myString is null
+}
+
+// This is how you would call this function
+println(getStringLength(null)) // This will throw a NullPointerException

@@ -1,0 +1,8 @@
+class BaseClass(val value: String)
+class DerivedClass(val derivedValue: String): BaseClass(derivedValue)
+
+fun main() {
+    val base: BaseClass = DerivedClass("Hello, World")
+    val derived: DerivedClass = base as DerivedClass // This will throw ClassCastException at runtime
+    println(derived.derivedValue)
+}

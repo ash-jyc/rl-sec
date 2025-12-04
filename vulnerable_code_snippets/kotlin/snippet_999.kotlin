@@ -1,0 +1,32 @@
+import java.util.*
+
+class Resource(val id: Int) {
+    companion object {
+        private val resources = HashMap<Int, Resource>()
+    }
+
+    fun use() {
+        println("Using resource $id")
+    }
+
+    fun close() {
+        println("Closing resource $id")
+        resources.remove(id)
+    }
+
+    companion object {
+        fun openResource(id: Int): Resource {
+            val resource = Resource(id)
+            resources[id] = resource
+            return resource
+        }
+    }
+}
+
+fun main() {
+    for (i in 1..1000000) {
+        val resource = Resource.openResource(i)
+        resource.use()
+        // No call to close the resource
+    }
+}

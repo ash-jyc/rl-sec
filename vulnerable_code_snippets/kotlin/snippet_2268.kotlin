@@ -1,0 +1,13 @@
+class User(val name: String?) {
+    fun printName() {
+        println("User name is $name")
+    }
+}
+
+fun main() {
+    val user1 = User("John")
+    val user2 = User(null)
+
+    user1.printName() // This will work fine
+    user2.printName() // This will throw NullPointerException
+}

@@ -1,0 +1,16 @@
+93
+168
+251
+268
+291
+313
+317
+340
+364 - info
+440
+478
+483
+515
+
+ran through pipe HF method
+should use parallel next time

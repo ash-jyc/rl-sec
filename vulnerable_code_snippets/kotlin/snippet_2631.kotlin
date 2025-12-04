@@ -1,0 +1,12 @@
+// This is a simple class in Kotlin
+class User(val name: String, val age: Int?) {
+    fun getDetails() {
+        println("Name: $name")
+        println("Age: $age") // This line can potentially throw a NullPointerException
+    }
+}
+
+fun main() {
+    val user = User("John Doe", null)
+    user.getDetails()
+}

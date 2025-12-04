@@ -1,0 +1,5 @@
+# Ignore local data cache
+/data/
+**/data/
+codeql*/
+vendor/

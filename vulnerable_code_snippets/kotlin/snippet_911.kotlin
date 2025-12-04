@@ -1,0 +1,22 @@
+import java.util.*
+
+data class User(val username: String, val password: String)
+
+class UserRepository {
+    private val users = mutableListOf<User>()
+
+    fun addUser(user: User) {
+        users.add(user)
+    }
+
+    fun getPasswordForUser(username: String): String? {
+        return users.find { it.username == username }?.password
+    }
+}
+
+fun main() {
+    val repo = UserRepository()
+    repo.addUser(User("admin", "secure_password"))
+
+    println(repo.getPasswordForUser("admin"))
+}

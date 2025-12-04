@@ -1,0 +1,13 @@
+// This is a simple class in Kotlin
+class SimpleClass {
+    private var myString: String? = null
+
+    fun doSomething() {
+        println(myString?.length) // This will throw a NullPointerException if myString is null
+    }
+}
+
+fun main() {
+    val simpleClass = SimpleClass()
+    simpleClass.doSomething() // This will throw a NullPointerException
+}

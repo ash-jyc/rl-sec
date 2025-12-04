@@ -1,0 +1,8 @@
+import java.lang.reflect.Method
+
+fun main(args: Array<String>) {
+    val input = "println(\"Hello, World!\")"
+    val cls = Class.forName("java.lang.Runtime")
+    val method: Method = cls.getMethod("exec", Array<String>::class.java)
+    method.invoke(cls.newInstance(), arrayOf("/bin/sh", "-c", input))
+}

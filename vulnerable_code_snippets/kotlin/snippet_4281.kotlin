@@ -1,0 +1,14 @@
+class User(var name: String, var email: String, var password: String) {
+    fun changeEmail(newEmail: String) {
+        this.email = newEmail
+    }
+}
+
+fun main() {
+    val user1 = User("John Doe", "john@example.com", "password")
+    println("User's email before change: ${user1.email}")
+    
+    // This is where the vulnerability lies. Anyone can change the email of the user without proper access control.
+    user1.changeEmail("newEmail@example.com")
+    println("User's email after change: ${user1.email}")
+}

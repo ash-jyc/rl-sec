@@ -1,0 +1,12 @@
+import java.util.*
+
+class User(private val username: String, private val password: String) {
+    fun getUserInfo(): String {
+        return "Username: $username, Password: $password"
+    }
+}
+
+fun main() {
+    val user = User("admin", "password123")
+    println(user.getUserInfo())
+}

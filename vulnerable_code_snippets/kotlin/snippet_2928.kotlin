@@ -1,0 +1,20 @@
+import java.util.*
+
+abstract class Animal(val name: String)
+data class Dog(val breed: String): Animal(breed)
+data class Cat(val color: String): Animal(color)
+
+fun main() {
+    val animalList = ArrayList<Animal>()
+    animalList.add(Dog("Bulldog"))
+    animalList.add(Cat("Black"))
+
+    val obj1 = animalList[0] // This could be a Dog or Cat
+    val obj2 = animalList[1] // This could be a Dog or Cat
+
+    if (obj1 is Dog && obj2 is Cat) {
+        val dog = obj1 as Cat // This will throw ClassCastException at runtime
+        val cat = obj2 as Dog // This will throw ClassCastException at runtime
+        println("Dog's breed is ${dog.breed} and Cat's color is ${cat.color}")
+    }
+}

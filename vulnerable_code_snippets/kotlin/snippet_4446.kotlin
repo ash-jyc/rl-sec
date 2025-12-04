@@ -1,0 +1,26 @@
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.Statement
+
+fun main(args: Array<String>) {
+    val username = "testUser"
+    val password = "testPassword"
+    val dbUrl = "jdbc:mysql://localhost:3306/testDb"
+    val connectionProps = Properties()
+    connectionProps["user"] = username
+    connectionProps["password"] = password
+    val conn = DriverManager.getConnection(dbUrl, connectionProps)
+    val stmt = conn.createStatement()
+
+    // Vulnerable point - direct use of user input without any kind of validation
+    val userInput = readLine()!!
+    val sqlQuery = "SELECT * FROM users WHERE username='$userInput'"
+    val rs = stmt.executeQuery(sqlQuery)
+
+    while (rs.next()) {
+        println("${rs.getString(1)}, ${rs.getString(2)}")
+    }
+    rs.close()
+    stmt.close()
+    conn.close()
+}

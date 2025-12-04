@@ -1,0 +1,12 @@
+class MyClass {
+    lateinit var myVariable: String
+
+    fun useMyVariable() {
+        println(myVariable) // This will throw a NullPointerException if myVariable is not initialized
+    }
+}
+
+fun main() {
+    val myObject = MyClass()
+    myObject.useMyVariable() 
+}

@@ -1,0 +1,5 @@
+fun main(args: Array<String>) {
+    val input = readLine()!!
+    val command = "SELECT * FROM users WHERE username='$input'"
+    println(command)
+}

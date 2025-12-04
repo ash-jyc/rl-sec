@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your password:");
+        String password = scanner.nextLine();
+        
+        try {
+            if (!password.equals("myPassword")) {
+                throw new Exception("Incorrect password!");
+            }
+            System.out.println("Access granted.");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

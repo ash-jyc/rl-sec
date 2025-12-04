@@ -1,0 +1,6 @@
+fun main(args: Array<String>) {
+    val nullableList: List<Any?> = listOf("Hello", null, "World")
+    for (item in nullableList) {
+        println(item.length) // This will cause a null pointer exception because item can be null
+    }
+}

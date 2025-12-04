@@ -1,0 +1,34 @@
+import java.util.*
+
+fun main(args: Array<String>) {
+    val scanner = Scanner(System.`in`)
+    print("Enter your expression: ")
+    val input = scanner.nextLine()
+    try {
+        println("Result: ${eval(input)}")
+    } catch (e: Exception) {
+        println("Invalid Expression")
+    }
+}
+
+fun eval(expression: String): Double {
+    return object : Any() {
+        val result = expression.replace("[^0-9+\\-*/]".toRegex(), "")
+            .let { if (it.isEmpty()) throw IllegalArgumentException() else it }
+            .let { it.replace("[+]".toRegex(), " + ") }
+            .let { it.replace("[-]".toRegex(), " - ") }
+            .let { it.replace("[*]".toRegex(), " * ") }
+            .let { it.replace("[/]".toRegex(), " / ") }
+            .split(" ")
+            .fold(ArrayDeque<Double>()) { stack, token ->
+                when (token) {
+                    "+" -> stack.push(stack.pop() + stack.pop())
+                    "-" -> stack.push(-stack.pop() + stack.pop())
+                    "*" -> stack.push(stack.pop() * stack.pop())
+                    "/" -> stack.push(1 / stack.pop() * stack.pop())
+                    else -> stack.push(token.toDouble())
+                }
+                stack
+            }.first()
+    }.result
+}

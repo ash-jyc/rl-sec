@@ -1,0 +1,18 @@
+class MyClass {
+    private var myResource: Any? = null
+
+    fun openResource() {
+        myResource = Any()
+    }
+
+    fun closeResource() {
+        myResource = null
+    }
+
+    fun useResource() {
+        if (myResource == null) {
+            throw NullPointerException("Resource is not opened")
+        }
+        // use resource
+    }
+}

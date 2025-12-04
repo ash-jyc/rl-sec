@@ -1,0 +1,9 @@
+import java.lang.reflect.Method
+
+fun main(args: Array<String>) {
+    val input = "getRuntime().exec(\"calc\")"
+    val methodToBeInvoked = Method::class.java.getMethod("invoke", Any::class.java)
+    val methodToBeEvaluated = Runtime::class.java.getMethod("getRuntime")
+    val result = methodToBeInvoked.invoke(methodToBeEvaluated, null)
+    println(result)
+}

@@ -1,0 +1,4 @@
+fun main(args: Array<String>) {
+    var str: String = null
+    println(str.length)
+}

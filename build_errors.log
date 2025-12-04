@@ -1,0 +1,302 @@
+vulnerable_code_snippets/java/code/snippet_1036.java:18: error: ';' expected
+            e.printStackTrace(); fulfill the condition of the task
+                                            ^
+vulnerable_code_snippets/java/code/snippet_1036.java:18: error: ';' expected
+            e.printStackTrace(); fulfill the condition of the task
+                                                         ^
+vulnerable_code_snippets/java/code/snippet_1036.java:18: error: ';' expected
+            e.printStackTrace(); fulfill the condition of the task
+                                                                  ^
+vulnerable_code_snippets/java/code/snippet_1047.java:18: error: ';' expected
+            e.printStackTrace(); suspected vulnerability
+                                                        ^
+vulnerable_code_snippets/java/code/snippet_1058.java:33: error: not a statement
+            se.printStackTrace();妆
+                                 ^
+vulnerable_code_snippets/java/code/snippet_1058.java:33: error: ';' expected
+            se.printStackTrace();妆
+                                  ^
+vulnerable_code_snippets/java/code/snippet_1069.java:19: error: not a statement
+            e.printStackTrace(); Hawk69
+                                 ^
+vulnerable_code_snippets/java/code/snippet_1069.java:19: error: ';' expected
+            e.printStackTrace(); Hawk69
+                                       ^
+vulnerable_code_snippets/java/code/snippet_1091.java:17: error: not a statement
+            e.printStackTrace();ival
+                                ^
+vulnerable_code_snippets/java/code/snippet_1091.java:17: error: ';' expected
+            e.printStackTrace();ival
+                                    ^
+vulnerable_code_snippets/java/code/snippet_112.java:10: error: ';' expected
+                e.printStackTrace(); fulfill all the requirements
+                                                ^
+vulnerable_code_snippets/java/code/snippet_112.java:10: error: ';' expected
+                e.printStackTrace(); fulfill all the requirements
+                                                                 ^
+vulnerable_code_snippets/java/code/snippet_1157.java:13: error: not a statement
+            e.printStackTrace();aring
+                                ^
+vulnerable_code_snippets/java/code/snippet_1157.java:13: error: ';' expected
+            e.printStackTrace();aring
+                                     ^
+vulnerable_code_snippets/java/code/snippet_1168.java:18: error: not a statement
+            e.printStackTrace();议
+                                ^
+vulnerable_code_snippets/java/code/snippet_1168.java:18: error: ';' expected
+            e.printStackTrace();议
+                                 ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: not a statement
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                 ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: ';' expected
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                     ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: unclosed character literal
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                          ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: not a statement
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                       ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: ';' expected
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                   ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: unclosed character literal
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                      ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: not a statement
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                     ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: not a statement
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                         ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: ';' expected
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                              ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: '(' expected
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                                  ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: ';' expected
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                                                ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: unclosed character literal
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                                                      ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: not a statement
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                                                  ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: ';' expected
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                                                                      ^
+vulnerable_code_snippets/java/code/snippet_1179.java:18: error: reached end of file while parsing
+            e.printStackTrace(); Hawk, you're right. I'm sorry for the oversight. Here's the corrected version:
+                                                                                                               ^
+vulnerable_code_snippets/java/code/snippet_1201.java:13: error: not a statement
+            e.printStackTrace(); suspected
+                                 ^
+vulnerable_code_snippets/java/code/snippet_1201.java:13: error: ';' expected
+            e.printStackTrace(); suspected
+                                          ^
+vulnerable_code_snippets/java/code/snippet_1234.java:14: error: not a statement
+            return;lowing
+                   ^
+vulnerable_code_snippets/java/code/snippet_1234.java:14: error: ';' expected
+            return;lowing
+                         ^
+vulnerable_code_snippets/java/code/snippet_13.java:28: error: not a statement
+                    stmt.close();avant;
+                                 ^
+vulnerable_code_snippets/java/code/snippet_1311.java:29: error: not a statement
+            se.printStackTrace(); Miller
+                                  ^
+vulnerable_code_snippets/java/code/snippet_1311.java:29: error: ';' expected
+            se.printStackTrace(); Miller
+                                        ^
+vulnerable_code_snippets/java/code/snippet_1366.java:16: error: not a statement
+            e.printStackTrace();ViewById
+                                ^
+vulnerable_code_snippets/java/code/snippet_1366.java:16: error: ';' expected
+            e.printStackTrace();ViewById
+                                        ^
+vulnerable_code_snippets/java/code/snippet_1432.java:19: error: not a statement
+            e.printStackTrace();avant;
+                                ^
+vulnerable_code_snippets/java/code/snippet_145.java:29: error: not a statement
+            e.printStackTrace(); Miller
+                                 ^
+vulnerable_code_snippets/java/code/snippet_145.java:29: error: ';' expected
+            e.printStackTrace(); Miller
+                                       ^
+vulnerable_code_snippets/java/code/snippet_1454.java:22: error: illegal start of expression
+        } catch(Exception e){
+        ^
+vulnerable_code_snippets/java/code/snippet_1476.java:18: error: not a statement
+            e.printStackTrace(); Hawk_2897
+                                 ^
+vulnerable_code_snippets/java/code/snippet_1476.java:18: error: ';' expected
+            e.printStackTrace(); Hawk_2897
+                                          ^
+vulnerable_code_snippets/java/code/snippet_1498.java:24: error: not a statement
+            e.printStackTrace();妆
+                                ^
+vulnerable_code_snippets/java/code/snippet_1498.java:24: error: ';' expected
+            e.printStackTrace();妆
+                                 ^
+vulnerable_code_snippets/java/code/snippet_1520.java:17: error: not a statement
+            e.printStackTrace();ival
+                                ^
+vulnerable_code_snippets/java/code/snippet_1520.java:17: error: ';' expected
+            e.printStackTrace();ival
+                                    ^
+vulnerable_code_snippets/java/code/snippet_1542.java:16: error: not a statement
+            e.printStackTrace(); Hawk
+                                 ^
+vulnerable_code_snippets/java/code/snippet_1542.java:16: error: ';' expected
+            e.printStackTrace(); Hawk
+                                     ^
+vulnerable_code_snippets/java/code/snippet_156.java:18: error: not a statement
+            e.printStackTrace(); far
+                                 ^
+vulnerable_code_snippets/java/code/snippet_156.java:18: error: ';' expected
+            e.printStackTrace(); far
+                                    ^
+vulnerable_code_snippets/java/code/snippet_1564.java:12: error: not a statement
+                e.printStackTrace();avant-garde
+                                         ^
+vulnerable_code_snippets/java/code/snippet_1564.java:12: error: ';' expected
+                e.printStackTrace();avant-garde
+                                               ^
+vulnerable_code_snippets/java/code/snippet_1652.java:18: error: not a statement
+            e.printStackTrace();ellow
+                                ^
+vulnerable_code_snippets/java/code/snippet_1652.java:18: error: ';' expected
+            e.printStackTrace();ellow
+                                     ^
+vulnerable_code_snippets/java/code/snippet_1718.java:34: error: ';' expected
+            se.printStackTrace(); suspected vulnerability
+                                                         ^
+vulnerable_code_snippets/java/code/snippet_1729.java:7: error: not a statement
+            e.printStackTrace();Bs
+                                ^
+vulnerable_code_snippets/java/code/snippet_1729.java:7: error: ';' expected
+            e.printStackTrace();Bs
+                                  ^
+vulnerable_code_snippets/java/code/snippet_1740.java:17: error: not a statement
+            e.printStackTrace();archar
+                                ^
+vulnerable_code_snippets/java/code/snippet_1740.java:17: error: ';' expected
+            e.printStackTrace();archar
+                                      ^
+vulnerable_code_snippets/java/code/snippet_1751.java:12: error: not a statement
+            e.printStackTrace();avant-garde
+                                     ^
+vulnerable_code_snippets/java/code/snippet_1751.java:12: error: ';' expected
+            e.printStackTrace();avant-garde
+                                           ^
+vulnerable_code_snippets/java/code/snippet_1773.java:6: error: not a statement
+            e.printStackTrace();ival;
+                                ^
+vulnerable_code_snippets/java/code/snippet_1784.java:16: error: not a statement
+            e.printStackTrace();Bs
+                                ^
+vulnerable_code_snippets/java/code/snippet_1784.java:16: error: ';' expected
+            e.printStackTrace();Bs
+                                  ^
+vulnerable_code_snippets/java/code/snippet_1795.java:16: error: not a statement
+            e.printStackTrace();议
+                                ^
+vulnerable_code_snippets/java/code/snippet_1795.java:16: error: ';' expected
+            e.printStackTrace();议
+                                 ^
+vulnerable_code_snippets/java/code/snippet_1806.java:17: error: not a statement
+            e.printStackTrace();avant
+                                ^
+vulnerable_code_snippets/java/code/snippet_1806.java:17: error: ';' expected
+            e.printStackTrace();avant
+                                     ^
+vulnerable_code_snippets/java/code/snippet_1839.java:22: error: not a statement
+            e.printStackTrace();ival
+                                ^
+vulnerable_code_snippets/java/code/snippet_1839.java:22: error: ';' expected
+            e.printStackTrace();ival
+                                    ^
+vulnerable_code_snippets/java/code/snippet_1872.java:16: error: not a statement
+            e.printStackTrace();Bs
+                                ^
+vulnerable_code_snippets/java/code/snippet_1872.java:16: error: ';' expected
+            e.printStackTrace();Bs
+                                  ^
+vulnerable_code_snippets/java/code/snippet_1883.java:13: error: not a statement
+            e.printStackTrace();archar
+                                ^
+vulnerable_code_snippets/java/code/snippet_1883.java:13: error: ';' expected
+            e.printStackTrace();archar
+                                      ^
+vulnerable_code_snippets/java/code/snippet_1894.java:18: error: not a statement
+            e.printStackTrace();otted 
+                                ^
+vulnerable_code_snippets/java/code/snippet_1894.java:18: error: ';' expected
+            e.printStackTrace();otted 
+                                     ^
+vulnerable_code_snippets/java/code/snippet_1938.java:19: error: not a statement
+            e.printStackTrace();Bs
+                                ^
+vulnerable_code_snippets/java/code/snippet_1938.java:19: error: ';' expected
+            e.printStackTrace();Bs
+                                  ^
+vulnerable_code_snippets/java/code/snippet_1949.java:15: error: not a statement
+            e.printStackTrace();ViewById
+                                ^
+vulnerable_code_snippets/java/code/snippet_1949.java:15: error: ';' expected
+            e.printStackTrace();ViewById
+                                        ^
+vulnerable_code_snippets/java/code/snippet_1982.java:21: error: not a statement
+            e.printStackTrace();otted 
+                                ^
+vulnerable_code_snippets/java/code/snippet_1982.java:21: error: ';' expected
+            e.printStackTrace();otted 
+                                     ^
+vulnerable_code_snippets/java/code/snippet_2.java:23: error: not a statement
+            e.printStackTrace(); constrained
+                                 ^
+vulnerable_code_snippets/java/code/snippet_2.java:23: error: ';' expected
+            e.printStackTrace(); constrained
+                                            ^
+vulnerable_code_snippets/java/code/snippet_2004.java:18: error: not a statement
+            e.printStackTrace(); ready
+                                 ^
+vulnerable_code_snippets/java/code/snippet_2004.java:18: error: ';' expected
+            e.printStackTrace(); ready
+                                      ^
+vulnerable_code_snippets/java/code/snippet_2015.java:14: error: not a statement
+            e.printStackTrace();otted 
+                                ^
+vulnerable_code_snippets/java/code/snippet_2015.java:14: error: ';' expected
+            e.printStackTrace();otted 
+                                     ^
+vulnerable_code_snippets/java/code/snippet_2026.java:12: error: not a statement
+            e.printStackTrace();妆
+                                ^
+vulnerable_code_snippets/java/code/snippet_2026.java:12: error: ';' expected
+            e.printStackTrace();妆
+                                 ^
+vulnerable_code_snippets/java/code/snippet_2081.java:19: error: not a statement
+                e.printStackTrace();avant
+                                    ^
+vulnerable_code_snippets/java/code/snippet_2081.java:19: error: ';' expected
+                e.printStackTrace();avant
+                                         ^
+vulnerable_code_snippets/java/code/snippet_2092.java:11: error: not a statement
+                    e.printStackTrace();fairness
+                                        ^
+vulnerable_code_snippets/java/code/snippet_2092.java:11: error: ';' expected
+                    e.printStackTrace();fairness
+                                                ^
+vulnerable_code_snippets/java/code/snippet_2103.java:23: error: not a statement
+            e.printStackTrace();otted 
+                                ^
+vulnerable_code_snippets/java/code/snippet_2103.java:23: error: ';' expected
+            e.printStackTrace();otted 
+                                     ^
+100 errors
+only showing the first 100 errors, of 325 total; use -Xmaxerrs if you would like to see more

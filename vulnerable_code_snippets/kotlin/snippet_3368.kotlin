@@ -1,0 +1,24 @@
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.PreparedStatement
+
+fun main(args: Array<String>) {
+    val username = getUserInput()
+    val password = getPasswordInput()
+    val connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", username, password)
+    val statement = connection.prepareStatement("SELECT * FROM users WHERE username = '$username' AND password = '$password'")
+    val resultSet = statement.executeQuery()
+    while (resultSet.next()) {
+        println("${resultSet.getString("username")} ${resultSet.getString("password")}")
+    }
+}
+
+fun getUserInput(): String {
+    // This function simulates getting user input from a form
+    return "user"
+}
+
+fun getPasswordInput(): String {
+    // This function simulates getting password input from a form
+    return "password123"
+}

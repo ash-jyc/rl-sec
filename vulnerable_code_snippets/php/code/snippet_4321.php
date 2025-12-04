@@ -1,0 +1,6 @@
+<?php
+$user_input = $_GET['user_input'];
+eval('$user_input = "' . $user_input . '";');
+extract($_GET);
+echo $user_input;
+?>

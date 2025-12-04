@@ -1,0 +1,6 @@
+fun main(args: Array<String>) {
+    val arr = IntArray(5)
+    for (i in 0..10) {
+        arr[i] = i
+    }
+}

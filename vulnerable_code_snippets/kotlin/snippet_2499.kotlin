@@ -1,0 +1,4 @@
+fun main(args: Array<String>) {
+    val x: String? = null
+    println(x.length)  // This will cause a NullPointerException
+}

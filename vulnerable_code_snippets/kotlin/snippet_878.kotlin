@@ -1,0 +1,13 @@
+class User(val name: String, val age: Int) {
+    fun greet() {
+        println("Hello, $name")
+    }
+}
+
+fun main() {
+    var user: User? = User("Alice", 25)
+    user?.greet() // This will not throw NullPointerException
+
+    user = null
+    user?.greet() // This will throw NullPointerException
+}

@@ -1,0 +1,13 @@
+import java.util.regex.Pattern
+
+fun main(args: Array<String>) {
+    val userInput = "user_input"
+    val regex = Pattern.compile("^[a-zA-Z0-9]+\$")
+    val matcher = regex.matcher(userInput)
+    
+    if (matcher.find()) {
+        println("Valid input")
+    } else {
+        println("Invalid input")
+    }
+}

@@ -1,0 +1,13 @@
+class Account {
+    lateinit var balance: Double
+
+    fun deposit(amount: Double) {
+        balance += amount
+    }
+}
+
+fun main() {
+    val account = Account()
+    account.deposit(100.0)
+    println(account.balance)
+}

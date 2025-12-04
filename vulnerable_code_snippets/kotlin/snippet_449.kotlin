@@ -1,0 +1,16 @@
+open class Animal(val name: String) {
+    open fun makeSound() {
+        println("The animal makes a sound")
+    }
+}
+
+class Dog(name: String) : Animal(name) {
+    override fun makeSound() {
+        println("$name barks")
+    }
+}
+
+fun main() {
+    val myAnimal: Animal? = null
+    myAnimal?.makeSound()
+}

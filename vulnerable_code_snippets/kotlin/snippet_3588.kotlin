@@ -1,0 +1,12 @@
+class MyClass {
+    val myVar: String by lazy { getMyVariable() }
+
+    fun getMyVariable(): String {
+        return "Hello World"
+    }
+}
+
+fun main(args: Array<String>) {
+    val myObject = MyClass()
+    println(myObject.myVar)
+}

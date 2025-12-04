@@ -1,0 +1,16 @@
+open class Animal(val name: String)
+class Dog(name: String) : Animal(name)
+class Cat(name: String) : Animal(name)
+
+fun main() {
+    val animal = Animal("Generic Animal")
+    val dog = Dog("Dog")
+    val cat = Cat("Cat")
+
+    val animals = arrayOf(animal, dog, cat)
+
+    for (animal in animals) {
+        val castedAnimal = animal as Dog  // Unchecked cast
+        println(castedAnimal.name)
+    }
+}

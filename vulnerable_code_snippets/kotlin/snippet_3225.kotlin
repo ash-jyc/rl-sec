@@ -1,0 +1,15 @@
+import java.io.FileNotFoundException
+
+fun main(args: Array<String>) {
+    try {
+        // Assume that this function throws FileNotFoundException
+        readFile("nonExistentFile.txt")
+    } catch (e: FileNotFoundException) {
+        e.printStackTrace()
+    }
+}
+
+@Throws(FileNotFoundException::class)
+fun readFile(fileName: String) {
+    throw FileNotFoundException("File $fileName not found")
+}

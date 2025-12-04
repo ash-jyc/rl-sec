@@ -1,0 +1,10 @@
+fun main(args: Array<String>) {
+    val calculator = Calculator()
+    println("Result: ${calculator.divide(10, 0)}")
+}
+
+class Calculator {
+    fun divide(a: Int, b: Int): Int {
+        return a / b
+    }
+}

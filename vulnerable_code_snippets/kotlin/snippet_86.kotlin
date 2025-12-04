@@ -1,0 +1,15 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
+fun main(args: Array<String>) {
+    val reader = BufferedReader(InputStreamReader(System.`in`))
+    print("Enter something: ")
+    val input = reader.readLine()
+    eval(input)
+}
+
+fun eval(input: String) {
+    // This is a security risk as it allows arbitrary code execution
+    val code = "println(\"You entered: \${$input}\")"
+    val script = groovy.lang.GroovyShell().evaluate(code)
+}

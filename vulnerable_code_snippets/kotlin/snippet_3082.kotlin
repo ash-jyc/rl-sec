@@ -1,0 +1,8 @@
+import java.nio.ByteBuffer
+
+fun main(args: Array<String>) {
+    val buffer = ByteBuffer.allocateDirect(1024)
+    for (i in 0..1025) {
+        buffer.putInt(i)
+    }
+}

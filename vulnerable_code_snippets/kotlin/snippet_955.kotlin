@@ -1,0 +1,12 @@
+import java.util.*
+
+fun main(args: Array<String>) {
+    val scanner = Scanner(System.`in`)
+    println("Enter your age:")
+    val age = scanner.nextInt()
+    if (age > 18) {
+        println("You are eligible to vote.")
+    } else {
+        println("You are not eligible to vote.")
+    }
+}

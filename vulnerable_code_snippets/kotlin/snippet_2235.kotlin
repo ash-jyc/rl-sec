@@ -1,0 +1,13 @@
+open class Animal(val name: String)
+class Dog(name: String) : Animal(name)
+class Cat(name: String) : Animal(name)
+
+fun main() {
+    val animal = Dog("Dog")
+    castToCat(animal)
+}
+
+fun castToCat(animal: Animal) {
+    val cat = animal as Cat // Unsafe type casting here
+    println(cat.name)
+}

@@ -1,0 +1,10 @@
+class User(val name: String?)
+
+fun getUserNameLength(user: User): Int {
+    return user.name.length // This line can potentially throw a NullPointerException if user.name is null
+}
+
+fun main() {
+    val user = User(null)
+    println(getUserNameLength(user)) // This will cause a NullPointerException
+}

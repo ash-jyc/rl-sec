@@ -1,0 +1,26 @@
+open class A {
+    open fun print() {
+        println("A")
+    }
+}
+
+open class B : A() {
+    override fun print() {
+        println("B")
+    }
+}
+
+open class C : A() {
+    override fun print() {
+        println("C")
+    }
+}
+
+class D : B(), C() {
+    // No implementation here
+}
+
+fun main(args: Array<String>) {
+    val d = D()
+    d.print() // Output: "B" or "C", depending on the order of inheritance
+}

@@ -1,0 +1,19 @@
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.Statement
+
+fun main(args: Array<String>) {
+    val username = args[0]
+    val password = args[1]
+    val sqlQuery = "SELECT * FROM Users WHERE Username='$username' AND Password='$password'"
+    
+    val conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", "root", "mypassword")
+    val stmt: Statement = conn.createStatement()
+    val rs = stmt.executeQuery(sqlQuery)
+    
+    while (rs.next()) {
+        println("User ID: ${rs.getInt("id")}")
+        println("Username: ${rs.getString("username")}")
+        println("Password: ${rs.getString("password")}")
+    }
+}

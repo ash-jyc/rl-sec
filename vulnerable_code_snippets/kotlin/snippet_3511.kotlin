@@ -1,0 +1,12 @@
+class Example {
+    var someVariable: String? = null
+
+    fun someFunction() {
+        println(someVariable?.length)
+    }
+}
+
+fun main() {
+    val example = Example()
+    example.someFunction()
+}

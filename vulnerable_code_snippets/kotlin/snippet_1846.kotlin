@@ -1,0 +1,17 @@
+class Animal {
+    fun makeSound() {
+        println("This animal makes a sound")
+    }
+}
+
+class Dog : Animal() {
+    fun woof() {
+        println("Woof Woof")
+    }
+}
+
+fun main(args: Array<String>) {
+    val animal: Animal? = Dog() // Unchecked cast
+    animal?.makeSound() // This will work fine
+    (animal as? Dog)?.woof() // This can throw null pointer exception if animal is not a Dog
+}

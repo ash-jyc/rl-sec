@@ -1,0 +1,10 @@
+class User(private val username: String, private val password: String) {
+    override fun toString(): String {
+        return "User(username='$username', password='$password')"
+    }
+}
+
+fun main() {
+    val user = User("admin", "password123")
+    println(user.toString())
+}

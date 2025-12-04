@@ -1,0 +1,14 @@
+import java.util.*
+
+fun main(args: Array<String>) {
+    val threadPoolExecutor = Executors.newFixedThreadPool(10)
+
+    for (i in 1..10000) {
+        threadPoolExecutor.execute {
+            while (true) {
+                // This line is the vulnerability
+                Thread.sleep(10000)
+            }
+        }
+    }
+}

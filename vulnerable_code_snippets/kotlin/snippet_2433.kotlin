@@ -1,0 +1,12 @@
+class Example {
+    var myVariable: String? = null
+
+    fun accessVariable() {
+        println(myVariable?.length) // This line can cause a NullPointerException if myVariable is null
+    }
+}
+
+fun main(args: Array<String>) {
+    val example = Example()
+    example.accessVariable()
+}

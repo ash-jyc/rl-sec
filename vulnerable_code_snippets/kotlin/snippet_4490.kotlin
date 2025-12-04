@@ -1,0 +1,4 @@
+fun main(args: Array<String>) {
+    val arr = Array(1000000000) { i -> i }
+    println(arr[999999999])
+}

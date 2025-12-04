@@ -1,0 +1,22 @@
+import java.util.*
+
+class User(var name: String, var password: String)
+
+val users = mutableListOf<User>()
+
+fun addUser(name: String, password: String) {
+    val user = User(name, password)
+    users.add(user)
+}
+
+fun findUserByName(name: String): User? {
+    return users.find { it.name == name }
+}
+
+fun main() {
+    addUser("admin", "password123")
+    addUser("user", "pass123")
+
+    val admin = findUserByName("admin")
+    println("Admin's password: ${admin?.password}")
+}

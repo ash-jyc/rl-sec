@@ -1,0 +1,10 @@
+class User(val name: String?)
+
+fun getUserNameLength(user: User?): Int {
+    return user?.name?.length ?: 0
+}
+
+fun main() {
+    val user = User(null)
+    println(getUserNameLength(user))
+}

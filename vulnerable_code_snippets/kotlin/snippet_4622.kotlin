@@ -1,0 +1,15 @@
+// Define a data class
+data class User(val name: String, val age: Int)
+
+fun main() {
+    // Create two instances of User
+    val user1 = User("Alice", 25)
+    val user2 = User("Alice", 25)
+
+    // Compare them using == operator
+    if (user1 == user2) {
+        println("Users are equal")
+    } else {
+        println("Users are not equal")
+    }
+}

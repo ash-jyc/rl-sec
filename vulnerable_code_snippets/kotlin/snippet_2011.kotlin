@@ -1,0 +1,14 @@
+fun main(args: Array<String>) {
+    val exceptionThrower = ExceptionThrower()
+    try {
+        exceptionThrower.throwException()
+    } catch (e: NullPointerException) {
+        println("Caught NullPointerException")
+    }
+}
+
+class ExceptionThrower {
+    fun throwException() {
+        throw NullPointerException()
+    }
+}

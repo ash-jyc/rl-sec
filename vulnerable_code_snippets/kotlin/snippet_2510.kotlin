@@ -1,0 +1,11 @@
+data class User(val name: String?, val age: Int?)
+
+fun main() {
+    val user: User? = getUser()
+    println("User's name is ${user.name}")
+    println("User's age is ${user.age}")
+}
+
+fun getUser(): User? {
+    return null
+}

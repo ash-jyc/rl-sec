@@ -1,0 +1,14 @@
+// This is a simple class representing a User
+class User(var name: String?) {
+    fun sayHello() {
+        println("Hello, $name")
+    }
+}
+
+fun main() {
+    // Create a User object without initializing its name
+    val user = User(null)
+    
+    // Try to access the name property of the User object
+    user.sayHello()
+}

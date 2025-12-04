@@ -1,0 +1,5 @@
+fun main(args: Array<String>) {
+    val str: String? = null
+    val length = str?.length // This could potentially cause a NullPointerException
+    println("The length of the string is $length")
+}

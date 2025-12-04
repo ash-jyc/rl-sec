@@ -1,0 +1,13 @@
+class User(val name: String?, val age: Int?) {
+    fun printUserInfo() {
+        println("Name: ${name?.length}, Age: $age")
+    }
+}
+
+fun main() {
+    val user1 = User("John", 25)
+    val user2 = User(null, null)
+
+    user1.printUserInfo()
+    user2.printUserInfo()
+}

@@ -1,0 +1,12 @@
+class Animal(val name: String)
+class Dog(name: String) : Animal(name)
+class Cat(name: String) : Animal(name)
+
+fun main() {
+    val animal = Animal("Generic Animal")
+    val dog = Dog("Doggo")
+
+    // Incorrectly try to cast Animal to Cat
+    val cat = animal as Cat
+    println(cat.name)
+}

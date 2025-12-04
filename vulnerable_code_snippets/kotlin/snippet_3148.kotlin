@@ -1,0 +1,11 @@
+import java.util.*
+
+fun main(args: Array<String>) {
+    val scanner = Scanner(System.`in`)
+    println("Enter your name:")
+    var name: String? = scanner.nextLine()
+    if (name == null || name.isEmpty()) {
+        name = "Guest"
+    }
+    println("Hello, $name")
+}

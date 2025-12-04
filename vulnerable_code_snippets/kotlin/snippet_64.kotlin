@@ -1,0 +1,5 @@
+fun main(args: Array<String>) {
+    val str1 = "Hello World"
+    val str2 = "Hello World"
+    println(str1 == str2) // This will print true even though they are different objects
+}

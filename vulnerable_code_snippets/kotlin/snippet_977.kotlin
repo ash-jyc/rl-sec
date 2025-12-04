@@ -1,0 +1,15 @@
+// Assume we have a class User
+class User(val name: String) {
+    fun greet() {
+        println("Hello, $name")
+    }
+}
+
+// And we have a function that accepts a User object
+fun greetUser(user: User?) {
+    // We try to call the greet method on the user object
+    user?.greet()
+}
+
+// Now we call this function with null
+greetUser(null)

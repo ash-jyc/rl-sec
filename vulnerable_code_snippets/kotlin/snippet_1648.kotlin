@@ -1,0 +1,19 @@
+class Animal {
+    fun eat() {
+        println("Animal is eating")
+    }
+}
+
+class Dog : Animal() {
+    fun bark() {
+        println("Dog is barking")
+    }
+}
+
+fun main(args: Array<String>) {
+    val animal: Animal = Dog()
+    if (animal is Dog) {
+        animal.bark() // Unchecked cast, this will work fine
+    }
+    (animal as Dog).bark() // Unchecked cast, this will throw ClassCastException at runtime
+}

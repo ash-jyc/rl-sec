@@ -1,0 +1,9 @@
+class User(val name: String?)
+
+fun main() {
+    val user1 = User("Alice")
+    val user2: User? = null
+
+    println(user1.name?.length) // This will print 5 as expected
+    println(user2?.name?.length) // This will NOT throw NullPointerException because we're using the safe call operator "?."
+}

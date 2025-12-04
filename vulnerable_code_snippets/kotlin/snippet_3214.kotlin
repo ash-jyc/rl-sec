@@ -1,0 +1,10 @@
+class User(var name: String?) {
+    fun printName() {
+        println("User name is $name")
+    }
+}
+
+fun main() {
+    val user = User(null)
+    user.printName()
+}

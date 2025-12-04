@@ -1,0 +1,12 @@
+class Example {
+    var name: String? = null
+
+    fun printName() {
+        println(name?.length)
+    }
+}
+
+fun main() {
+    val example = Example()
+    example.printName()
+}

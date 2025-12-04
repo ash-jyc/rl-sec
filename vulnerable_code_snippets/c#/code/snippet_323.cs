@@ -1,0 +1,11 @@
+public class TestClass 
+{
+    public void UnsafeMethod(string userInput) 
+    {
+        char[] buffer = new char[10];
+        for (int i = 0; i < userInput.Length; i++) 
+        {
+            buffer[i] = userInput[i];
+        }
+    }
+}

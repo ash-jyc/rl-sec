@@ -1,0 +1,12 @@
+class VulnerableClass {
+    val myLazyVal: String by lazy { getValue() }
+
+    fun getValue(): String? {
+        return null
+    }
+}
+
+fun main(args: Array<String>) {
+    val vc = VulnerableClass()
+    println(vc.myLazyVal.length) // This will throw NullPointerException
+}

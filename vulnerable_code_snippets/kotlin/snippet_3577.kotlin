@@ -1,0 +1,7 @@
+fun main(args: Array<String>) {
+    val parent: Parent = Child()
+    val child: Child = parent as Child // Unchecked cast here
+}
+
+open class Parent
+class Child: Parent()

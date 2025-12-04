@@ -1,0 +1,16 @@
+class MyClass {
+    lateinit var myProperty: String
+
+    fun initializeMyProperty() {
+        myProperty = "Hello, World!"
+    }
+
+    fun printMyProperty() {
+        println(myProperty)
+    }
+}
+
+fun main() {
+    val myObject = MyClass()
+    myObject.printMyProperty() // This will throw a NullPointerException
+}

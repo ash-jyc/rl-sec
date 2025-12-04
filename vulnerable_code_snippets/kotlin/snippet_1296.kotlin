@@ -1,0 +1,12 @@
+class MyClass {
+    lateinit var myProperty: String
+
+    fun someFunction() {
+        println(myProperty) // This will throw a NullPointerException if myProperty wasn't initialized before this line
+    }
+}
+
+fun main() {
+    val myObject = MyClass()
+    myObject.someFunction() // This will throw a NullPointerException
+}

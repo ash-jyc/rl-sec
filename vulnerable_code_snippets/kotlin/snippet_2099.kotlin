@@ -1,0 +1,51 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.URL
+
+fun main(args: Array<String>) {
+    val exec = Runtime.getRuntime().exec("ls")
+    val reader = BufferedReader(InputStreamReader(exec.inputStream))
+    var line: String?
+    while (reader.readLine().also { line = it } != null) {
+        println(line)
+    }
+}
+
+fun httpGet(urlStr: String): String {
+    val url = URL(urlStr)
+    val conn = url.openConnection() as HttpURLConnection
+    val responseCode = conn.responseCode
+    if (responseCode == 200) {
+        val inputStream = conn.inputStream
+        val content = inputStream.bufferedReader().use { it.readText() }
+        return content
+    } else {
+        throw Exception("HTTP GET request failed with response code $responseCode")
+    }
+}
+
+fun getUserInput(): String {
+    val reader = BufferedReader(InputStreamReader(System.`in`))
+    val userInput = reader.readLine()
+    return userInput
+}
+
+fun executeCommand(command: String) {
+    val exec = Runtime.getRuntime().exec(command)
+    val reader = BufferedReader(InputStreamReader(exec.inputStream))
+    var line: String?
+    while (reader.readLine().also { line = it } != null) {
+        println(line)
+    }
+}
+
+fun main(args: Array<String>) {
+    println("Enter the URL to fetch: ")
+    val url = getUserInput()
+    val content = httpGet(url)
+    println("Content received: $content")
+    println("Enter the command to execute: ")
+    val command = getUserInput()
+    executeCommand(command)
+}

@@ -1,0 +1,19 @@
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.Statement
+
+fun main(args: Array<String>) {
+    val username = "test'"
+    val password = "test"
+    val connectionProps = Properties()
+    connectionProps["user"] = username
+    connectionProps["password"] = password
+    val conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testDB", connectionProps)
+    val statement = conn.createStatement()
+    val userInput = "' OR '1'='1"
+    val sql = "SELECT * FROM users WHERE username='$userInput' AND password='$password'"
+    val resultSet = statement.executeQuery(sql)
+    while (resultSet.next()) {
+        println("User found: ${resultSet.getString("username")}")
+    }
+}

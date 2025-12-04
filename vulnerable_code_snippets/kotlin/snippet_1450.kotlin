@@ -1,0 +1,11 @@
+fun main(args: Array<String>) {
+    val x = readLine()?.toIntOrNull()
+
+    val result = when(x) {
+        1 -> "One"
+        2 -> "Two"
+        else -> "Unknown"
+    }
+
+    println(result)
+}

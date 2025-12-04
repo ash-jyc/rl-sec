@@ -1,0 +1,5 @@
+fun main(args: Array<String>) {
+    val nullableString: String? = null
+    val nonNullableString: String = nullableString as String // This will throw a NullPointerException
+    println(nonNullableString)
+}

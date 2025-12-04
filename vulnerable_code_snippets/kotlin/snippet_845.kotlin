@@ -1,0 +1,16 @@
+import java.util.*
+
+abstract class Animal(val name: String)
+class Dog(name: String) : Animal(name)
+class Cat(name: String) : Animal(name)
+
+fun main() {
+    val animals: MutableList<Animal> = ArrayList()
+    animals.add(Dog("Rex"))
+    animals.add(Cat("Whiskers"))
+
+    for (animal in animals) {
+        val dog = animal as Dog // Unchecked cast, can throw ClassCastException
+        println("${dog.name} barks")
+    }
+}

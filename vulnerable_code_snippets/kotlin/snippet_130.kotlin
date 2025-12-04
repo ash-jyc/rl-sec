@@ -1,0 +1,12 @@
+open class Animal(val name: String)
+class Dog(name: String) : Animal(name)
+class Cat(name: String) : Animal(name)
+
+fun main() {
+    val animal = Dog("Dog")
+    val dog = animal as Dog // This will work fine
+    println(dog.name)
+
+    val cat = animal as Cat // This will throw ClassCastException at runtime
+    println(cat.name)
+}

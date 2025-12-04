@@ -1,0 +1,6 @@
+fun main(args: Array<String>) {
+    val user = User("John")
+    println(user.name.length) // This will throw NullPointerException if user.name is null
+}
+
+class User(val name: String?)

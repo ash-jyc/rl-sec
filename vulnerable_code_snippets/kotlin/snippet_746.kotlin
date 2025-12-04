@@ -1,0 +1,19 @@
+class Animal {
+    fun sound() {
+        println("Animal makes sound")
+    }
+}
+
+class Dog : Animal() {
+    fun bark() {
+        println("Dog barks")
+    }
+}
+
+fun main(args: Array<String>) {
+    val animal: Animal = Dog()
+    if (animal is Dog) {
+        val dog = animal as Dog
+        dog.bark()
+    }
+}

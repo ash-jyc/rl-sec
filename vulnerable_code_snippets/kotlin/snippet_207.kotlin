@@ -1,0 +1,11 @@
+class User(var name: String?, var age: Int?) {
+    fun printInfo() {
+        println("Name: $name")
+        println("Age: $age")
+    }
+}
+
+fun main() {
+    val user = User(null, 25)
+    user.printInfo()
+}

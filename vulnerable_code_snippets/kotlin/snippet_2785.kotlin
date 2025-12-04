@@ -1,0 +1,9 @@
+fun main(args: Array<String>) {
+    val user = User("John", "Doe")
+    println(user.fullName)
+}
+
+class User(val firstName: String?, val lastName: String?) {
+    val fullName: String
+        get() = "$firstName $lastName"
+}

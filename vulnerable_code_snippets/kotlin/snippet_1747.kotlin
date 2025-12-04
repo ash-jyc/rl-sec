@@ -1,0 +1,10 @@
+data class User(val name: String?)
+
+fun main() {
+    val user: User? = getUser()
+    println("Hello, ${user.name}") // This will cause a NullPointerException if user is null
+}
+
+fun getUser(): User? {
+    return null
+}

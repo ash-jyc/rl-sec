@@ -1,0 +1,10 @@
+fun main(args: Array<String>) {
+    val a: String? = null
+    val b: String? = null
+
+    if (a == b) {
+        println("Equal")
+    } else {
+        println("Not Equal")
+    }
+}

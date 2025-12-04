@@ -1,0 +1,12 @@
+class ExampleClass {
+    var someProperty: String? = null
+
+    fun someFunction() {
+        println(someProperty?.length)
+    }
+}
+
+fun main() {
+    val exampleObject = ExampleClass()
+    exampleObject.someFunction()
+}

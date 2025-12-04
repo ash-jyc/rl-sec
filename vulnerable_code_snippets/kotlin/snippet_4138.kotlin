@@ -1,0 +1,9 @@
+var str: String? = null
+println(str?.length) // This will print null without throwing NullPointerException
+
+// Now let's try to access a method on the null object
+try {
+    println(str?.toUpperCase()) // This will throw NullPointerException
+} catch (e: NullPointerException) {
+    println("Caught NullPointerException")
+}

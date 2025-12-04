@@ -1,0 +1,12 @@
+data class User(val name: String?, val age: Int?)
+
+fun main() {
+    val user1 = User("John", 25)
+    val user2 = User(null, 30)
+
+    println(user1.name?.length) // This will not throw NullPointerException
+    println(user2.name?.length) // This will not throw NullPointerException
+
+    println(user1.name!!.length) // This might throw NullPointerException
+    println(user2.name!!.length) // This will definitely throw NullPointerException
+}

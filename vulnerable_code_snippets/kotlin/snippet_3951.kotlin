@@ -1,0 +1,11 @@
+// Assume we have a function that reads a file
+fun readFile(fileName: String): String {
+    val file = File(fileName)
+    return file.readText()
+}
+
+// Assume we call this function without checking if the file exists
+fun main(args: Array<String>) {
+    val content = readFile("nonexistent_file.txt")
+    println(content)
+}

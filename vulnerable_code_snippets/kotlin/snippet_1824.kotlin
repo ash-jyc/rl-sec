@@ -1,0 +1,9 @@
+open class Animal(val name: String)
+
+class Dog(name: String) : Animal(name)
+
+fun main() {
+    val animal: Animal = Dog("Doggy")
+    val dog: Dog = animal as Dog // Unsafe downcasting
+    println(dog.name)
+}

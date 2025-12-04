@@ -1,0 +1,15 @@
+import java.util.*
+
+fun main(args: Array<String>) {
+    val scanner = Scanner(System.`in`)
+    println("Enter your password:")
+    val userInput = scanner.next()
+
+    var password = "password123"
+
+    if (userInput == password) {
+        println("Access granted.")
+    } else {
+        println("Access denied.")
+    }
+}

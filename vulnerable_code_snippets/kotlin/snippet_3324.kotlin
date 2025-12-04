@@ -1,0 +1,13 @@
+import java.io.File
+
+fun main(args: Array<String>) {
+    val file = File("test.txt")
+    var content: String? = null
+    try {
+        content = file.readText()
+    } catch (e: Exception) {
+        // This catches all exceptions, including NullPointerException
+        println("Error reading file: ${e.message}")
+    }
+    println("File content: $content")
+}

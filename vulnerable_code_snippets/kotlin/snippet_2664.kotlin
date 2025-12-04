@@ -1,0 +1,28 @@
+import java.util.*
+
+class User(val id: String, var password: String)
+
+object UserManager {
+    private val users = HashMap<String, User>()
+
+    fun registerUser(id: String, password: String): User {
+        val user = User(id, password)
+        users[id] = user
+        return user
+    }
+
+    fun getUserPassword(id: String): String? {
+        return users[id]?.password
+    }
+}
+
+fun main() {
+    val admin = UserManager.registerUser("admin", "admin")
+    println("Admin's password: ${admin.password}") // This is a vulnerability
+
+    val hacker = UserManager.registerUser("hacker", "hacker")
+    println("Hacker's password: ${hacker.password}") // This is a vulnerability
+
+    hacker.password = "new_password" // This is a vulnerability
+    println("Hacker's new password: ${hacker.password}") // This is a vulnerability
+}

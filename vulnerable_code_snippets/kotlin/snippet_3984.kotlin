@@ -1,0 +1,28 @@
+import java.util.*
+
+class User(val id: String, var name: String, var email: String)
+
+object UserRepository {
+    private val users = HashMap<String, User>()
+
+    fun addUser(user: User) {
+        users[user.id] = user
+    }
+
+    fun getUserById(id: String): User? {
+        return users[id]
+    }
+}
+
+fun main(args: Array<String>) {
+    val admin = User("1", "Admin", "admin@example.com")
+    UserRepository.addUser(admin)
+
+    val hacker = User("2", "Hacker", "hacker@example.com")
+    UserRepository.addUser(hacker)
+
+    // Vulnerable line: The hacker can access the admin's data because they know the ID
+    val adminData = UserRepository.getUserById("1")
+    println(adminData?.name)
+    println(adminData?.email)
+}

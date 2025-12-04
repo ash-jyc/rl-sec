@@ -1,0 +1,5 @@
+fun main(args: Array<String>) {
+    val userInput = readLine()
+    // No null check here, could potentially throw a NullPointerException
+    println(userInput.length)
+}

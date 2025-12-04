@@ -1,0 +1,10 @@
+fun main(args: Array<String>) {
+    val user = User("John", null)
+    println(user.nameLength())
+}
+
+data class User(val name: String, val email: String?) {
+    fun nameLength(): Int? {
+        return this.email?.length
+    }
+}

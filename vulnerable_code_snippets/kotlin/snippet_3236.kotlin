@@ -1,0 +1,16 @@
+import java.util.*
+
+class ResourceLeak {
+    private val resources = ArrayList<String>()
+
+    fun addResource(resource: String) {
+        resources.add(resource)
+    }
+}
+
+fun main() {
+    val leak = ResourceLeak()
+    while (true) {
+        leak.addResource("New Resource")
+    }
+}

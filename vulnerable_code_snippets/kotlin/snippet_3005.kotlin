@@ -1,0 +1,4 @@
+fun main(args: Array<String>) {
+    val userName: String? = null
+    println("Hello, ${userName.toUpperCase()}")
+}

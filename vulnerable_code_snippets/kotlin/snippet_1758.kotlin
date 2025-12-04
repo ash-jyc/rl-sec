@@ -1,0 +1,8 @@
+fun main(args: Array<String>) {
+    val user = User()
+    println(user.name.length) // This will lead to NullPointerException
+}
+
+class User {
+    var name: String? = null
+}

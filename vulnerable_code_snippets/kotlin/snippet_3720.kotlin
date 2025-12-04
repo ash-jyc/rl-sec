@@ -1,0 +1,28 @@
+import java.util.*
+
+class User(val name: String) {
+    companion object {
+        val users = HashMap<String, User>()
+    }
+
+    init {
+        users[name] = this
+    }
+
+    fun getUser(name: String): User? {
+        return users[name]
+    }
+}
+
+fun main() {
+    val user1 = User("Alice")
+    val user2 = User("Bob")
+
+    println(user1.getUser("Bob")) // This will print Bob's user object
+
+    // Now, remove Bob from the map
+    User.users.remove("Bob")
+
+    // Here is the problem: We still have a reference to Bob's user object
+    println(user1.getUser("Bob")) // This will print null, but it shouldn't
+}

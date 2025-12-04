@@ -1,0 +1,14 @@
+import java.io.File
+
+fun main(args: Array<String>) {
+    val filePath = "path/to/file"
+    var fileContent: String? = null
+
+    try {
+        fileContent = File(filePath).readText()
+    } catch (e: Exception) {
+        // Handle exception here but do nothing
+    }
+
+    println("File content: $fileContent")
+}

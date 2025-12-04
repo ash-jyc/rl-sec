@@ -1,0 +1,29 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.URL
+
+fun main(args: Array<String>) {
+    val exec = Runtime.getRuntime().exec("ls")
+    val reader = BufferedReader(InputStreamReader(exec.inputStream))
+    var line: String?
+    while (reader.readLine().also { line = it } != null) {
+        println(line)
+    }
+}
+
+fun fetchUrl(url: String): String {
+    val connection = URL(url).openConnection() as HttpURLConnection
+    val inputStream = connection.inputStream
+    val content = inputStream.bufferedReader().use { it.readText() }
+    return content
+}
+
+fun executeCommand(command: String) {
+    val process = Runtime.getRuntime().exec(command)
+    val reader = BufferedReader(InputStreamReader(process.inputStream))
+    var line: String?
+    while (reader.readLine().also { line = it } != null) {
+        println(line)
+    }
+}

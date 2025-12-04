@@ -1,0 +1,13 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
+fun main(args: Array<String>) {
+    val reader = BufferedReader(InputStreamReader(System.`in`))
+    print("Enter your name: ")
+    val userInput = reader.readLine()
+    val buffer = CharArray(100)
+    for (i in 0 until userInput.length) {
+        buffer[i] = userInput[i]
+    }
+    println("Hello, ${String(buffer)}")
+}

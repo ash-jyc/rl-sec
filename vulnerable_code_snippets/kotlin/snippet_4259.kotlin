@@ -1,0 +1,10 @@
+fun main(args: Array<String>) {
+    val myObject: MyClass? = null
+    println(myObject.toString()) // This will cause a NullPointerException
+}
+
+class MyClass {
+    override fun toString(): String {
+        return "MyClass Object"
+    }
+}

@@ -1,0 +1,17 @@
+class BankAccount(private val balance: Double) {
+    fun withdraw(amount: Double): Double {
+        if (balance < amount) {
+            throw IllegalArgumentException("Insufficient funds")
+        }
+        return balance - amount
+    }
+}
+
+fun main() {
+    val account = BankAccount(100.0)
+    try {
+        println(account.withdraw(200.0))
+    } catch (e: Exception) {
+        println(e.message)
+    }
+}

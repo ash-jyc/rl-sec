@@ -1,0 +1,14 @@
+fun main(args: Array<String>) {
+    val myObject: MyClass? = null
+    try {
+        println(myObject.toString())
+    } catch (e: Exception) {
+        println("Caught an exception")
+    }
+}
+
+class MyClass {
+    override fun toString(): String {
+        return "MyClass"
+    }
+}

@@ -1,0 +1,18 @@
+import java.lang.reflect.InvocationTargetException
+
+fun main(args: Array<String>) {
+    val unsafeInput = "alert('This is an alert box');"
+    try {
+        val result = eval(unsafeInput)
+        println(result)
+    } catch (e: InvocationTargetException) {
+        e.printStackTrace()
+    }
+}
+
+fun eval(input: String): Any {
+    return when (input) {
+        "alert('This is an alert box');" -> throw InvocationTargetException(RuntimeException("Code Injection Attack!"))
+        else -> input
+    }
+}

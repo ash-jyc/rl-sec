@@ -1,0 +1,36 @@
+import java.util.*
+
+class DeadlockExample {
+    private val lock1 = Object()
+    private val lock2 = Object()
+
+    fun method1() {
+        synchronized(lock1) {
+            Thread.sleep(1000)
+            synchronized(lock2) {
+                println("Method 1")
+            }
+        }
+    }
+
+    fun method2() {
+        synchronized(lock2) {
+            Thread.sleep(1000)
+            synchronized(lock1) {
+                println("Method 2")
+            }
+        }
+    }
+}
+
+fun main() {
+    val deadlockExample = DeadlockExample()
+    val thread1 = Thread { deadlockExample.method1() }
+    val thread2 = Thread { deadlockExample.method2() }
+
+    thread1.start()
+    thread2.start()
+
+    thread1.join()
+    thread2.join()
+}

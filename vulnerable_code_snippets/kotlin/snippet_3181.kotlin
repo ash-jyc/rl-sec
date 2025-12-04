@@ -1,0 +1,16 @@
+class Animal(val name: String) {
+    override fun toString(): String {
+        return "Animal: $name"
+    }
+}
+
+class Dog(name: String): Animal(name)
+
+fun main() {
+    val animal = Animal("Generic Animal")
+    println(animal)
+
+    // This will cause a ClassCastException because we are trying to cast an Animal object to a Dog object
+    val dog = animal as Dog
+    println(dog)
+}

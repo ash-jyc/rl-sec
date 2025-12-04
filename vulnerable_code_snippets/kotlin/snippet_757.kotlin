@@ -1,0 +1,12 @@
+class MyClass {
+    private var myVariable: String? = null
+
+    fun setMyVariable(value: String) {
+        myVariable = value
+    }
+}
+
+fun main() {
+    val myObject = MyClass()
+    myObject.setMyVariable("Hello, World")
+}

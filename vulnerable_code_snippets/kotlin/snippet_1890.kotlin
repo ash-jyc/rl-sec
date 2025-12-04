@@ -1,0 +1,12 @@
+import java.util.*
+
+fun main(args: Array<String>) {
+    val myList = ArrayList<String>()
+    myList.add("Hello")
+    myList.add(null)
+    myList.add("World")
+
+    for (item in myList) {
+        println(item.length) // This will cause a NullPointerException because 'item' could be null
+    }
+}

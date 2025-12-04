@@ -1,0 +1,8 @@
+fun main(args: Array<String>) {
+    val userObj = User()
+    println(userObj.name.length)
+}
+
+class User {
+    var name: String? = null
+}

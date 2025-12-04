@@ -1,0 +1,25 @@
+import java.io.*
+import java.net.*
+
+fun main(args: Array<String>) {
+    val serverSocket = ServerSocket(8080)
+    println("Server is listening on port 8080")
+
+    while (true) {
+        val socket = serverSocket.accept()
+        val inputStreamReader = InputStreamReader(socket.getInputStream())
+        val bufferedReader = BufferedReader(inputStreamReader)
+
+        var requestData = bufferedReader.readLine()
+        while (requestData != null && !requestData.isEmpty()) {
+            println(requestData)
+            requestData = bufferedReader.readLine()
+        }
+
+        val outputStreamWriter = OutputStreamWriter(socket.getOutputStream())
+        outputStreamWriter.write("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n")
+        outputStreamWriter.write("<html><body>Hello, World</body></html>")
+        outputStreamWriter.flush()
+        socket.close()
+    }
+}

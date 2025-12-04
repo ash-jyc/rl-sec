@@ -1,0 +1,8 @@
+import java.lang.reflect.Method
+
+fun main(args: Array<String>) {
+    val input = "System.out.println(\"Hello, World!\");"
+    val cls = Class.forName("java.lang.Runtime")
+    val method: Method = cls.getMethod("exec", arrayOf<Class<*>>(String::class.java))
+    method.invoke(cls.newInstance(), arrayOf<Any>(input))
+}

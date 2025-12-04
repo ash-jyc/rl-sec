@@ -1,0 +1,4 @@
+fun main(args: Array<String>) {
+    val input = readLine()?.toInt()
+    println("You entered: $input")
+}

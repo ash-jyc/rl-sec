@@ -1,0 +1,14 @@
+class Animal(val name: String)
+class Dog(name: String, val breed: String): Animal(name)
+class Cat(name: String, val color: String): Animal(name)
+
+fun main() {
+    val animal = Animal("Generic Animal")
+    if (animal is Dog) {
+        println("This animal is a ${animal.breed}") // Unchecked cast, can throw ClassCastException
+    } else if (animal is Cat) {
+        println("This animal is a ${animal.color}") // Unchecked cast, can throw ClassCastException
+    } else {
+        println("This animal is just an Animal")
+    }
+}

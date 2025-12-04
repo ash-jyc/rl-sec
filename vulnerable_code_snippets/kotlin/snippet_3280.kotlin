@@ -1,0 +1,9 @@
+fun main(args: Array<String>) {
+    val nullableString: String? = null
+    // This will throw a NullPointerException because we're trying to compare a null value with `==`
+    if (nullableString == "Hello") {
+        println("Equal")
+    } else {
+        println("Not equal")
+    }
+}

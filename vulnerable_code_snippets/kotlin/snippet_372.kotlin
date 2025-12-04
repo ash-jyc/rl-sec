@@ -1,0 +1,8 @@
+fun main(args: Array<String>) {
+    val userInput = readLine()!!
+    val buffer = CharArray(1024)
+    for (i in 0 until userInput.length) {
+        buffer[i] = userInput[i]
+    }
+    println(buffer.concatToString())
+}

@@ -1,0 +1,11 @@
+class User(val name: String?, val age: Int?) {
+    fun printUserInfo() {
+        println("Name: ${name?.toUpperCase()}")
+        println("Age: $age")
+    }
+}
+
+fun main() {
+    val user = User(null, 25)
+    user.printUserInfo()
+}

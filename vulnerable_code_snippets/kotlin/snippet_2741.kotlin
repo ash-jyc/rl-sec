@@ -1,0 +1,10 @@
+class User(val name: String) {
+    lateinit var address: Address
+}
+
+class Address(val street: String)
+
+fun main() {
+    val user = User("John Doe")
+    println(user.address.street) // This will throw a NullPointerException
+}

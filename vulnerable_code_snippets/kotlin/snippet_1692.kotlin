@@ -1,0 +1,12 @@
+data class User(val name: String?, val age: Int?)
+
+fun main() {
+    val user = User("John", 25)
+
+    println("User's name: ${user.name}")
+    println("User's age: ${user.age}")
+
+    // Vulnerability: No null check before accessing properties
+    println("User's name length: ${user.name.length}")
+    println("User's age next year: ${user.age!! + 1}")
+}

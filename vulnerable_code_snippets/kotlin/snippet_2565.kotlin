@@ -1,0 +1,14 @@
+class Animal(val name: String)
+class Dog(name: String): Animal(name)
+class Cat(name: String): Animal(name)
+
+fun main() {
+    val animal = Animal("Generic Animal")
+    if (animal is Dog) {
+        println("This is a dog named ${animal.name}")
+    } else if (animal is Cat) {
+        println("This is a cat named ${animal.name}")
+    } else {
+        println("This is an unknown animal named ${animal.name}")
+    }
+}

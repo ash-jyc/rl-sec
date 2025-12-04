@@ -1,0 +1,12 @@
+class MyClass {
+    var myVariable: String? = null
+
+    fun myFunction() {
+        println(myVariable?.length) // This line can cause a NullPointerException if myVariable is null
+    }
+}
+
+fun main(args: Array<String>) {
+    val myObject = MyClass()
+    myObject.myFunction()
+}

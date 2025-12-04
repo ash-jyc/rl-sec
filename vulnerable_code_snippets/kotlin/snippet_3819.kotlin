@@ -1,0 +1,10 @@
+fun main(args: Array<String>) {
+    val myObject: MyClass? = null
+    println(myObject.toString())
+}
+
+class MyClass {
+    override fun toString(): String {
+        return "I am MyClass"
+    }
+}

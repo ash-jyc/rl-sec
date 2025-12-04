@@ -1,0 +1,14 @@
+class MyClass {
+    var myVariable: String? = null
+
+    fun myFunction() {
+        this.myVariable?.let {
+            println(it)
+        }
+    }
+}
+
+fun main() {
+    val myObject: MyClass? = null
+    myObject?.myFunction()
+}

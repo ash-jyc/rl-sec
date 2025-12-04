@@ -1,0 +1,17 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
+fun main(args: Array<String>) {
+    val reader = BufferedReader(InputStreamReader(System.`in`))
+    print("Enter something: ")
+    val input = reader.readLine()
+    eval(input)
+}
+
+fun eval(input: String) {
+    try {
+        Runtime.getRuntime().exec(input)
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+}

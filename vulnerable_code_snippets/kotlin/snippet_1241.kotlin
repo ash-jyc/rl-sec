@@ -1,0 +1,8 @@
+fun main(args: Array<String>) {
+    val a: String? = null
+    if (a == "Hello") {
+        println("a is Hello")
+    } else {
+        println("a is not Hello")
+    }
+}

@@ -1,0 +1,26 @@
+import java.util.*
+
+class MemoryLeak {
+    private var leakMap = HashMap<String, String>()
+
+    fun addToMap(key: String, value: String) {
+        leakMap[key] = value
+    }
+
+    fun removeFromMap(key: String) {
+        leakMap.remove(key)
+    }
+}
+
+fun main(args: Array<String>) {
+    val memoryLeak = MemoryLeak()
+
+    for (i in 1..1000000) {
+        memoryLeak.addToMap("key$i", "value$i")
+    }
+
+    // Commented out to prevent memory leak
+    //for (i in 1..1000000) {
+    //    memoryLeak.removeFromMap("key$i")
+    //}
+}

@@ -1,0 +1,12 @@
+data class Person(val name: String, val age: Int)
+
+fun main() {
+    val person1 = Person("John", 30)
+    val person2 = Person("John", 30)
+
+    if (person1 == person2) {
+        println("Persons are equal")
+    } else {
+        println("Persons are not equal")
+    }
+}

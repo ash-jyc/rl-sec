@@ -1,0 +1,33 @@
+import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
+
+class Vulnerable {
+    private var counter = 0
+
+    fun incrementCounter() {
+        Executors.newSingleThreadExecutor().execute {
+            Thread.sleep(100)
+            counter++
+        }
+    }
+
+    fun getCounter(): Int {
+        return counter
+    }
+}
+
+fun main() {
+    val vulnerable = Vulnerable()
+    val executorService = Executors.newFixedThreadPool(10)
+
+    for (i in 1..1000) {
+        executorService.submit {
+            vulnerable.incrementCounter()
+        }
+    }
+
+    executorService.shutdown()
+    executorService.awaitTermination(1, TimeUnit.MINUTES)
+
+    println("Final counter value: ${vulnerable.getCounter()}")
+}

@@ -1,0 +1,6 @@
+data class User(val name: String, val email: String?)
+
+fun main() {
+    val user = User("John Doe", null)
+    println("User's email is ${user.email}")
+}

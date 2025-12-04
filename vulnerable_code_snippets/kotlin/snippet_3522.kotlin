@@ -1,0 +1,10 @@
+fun main(args: Array<String>) {
+    val user: User? = getUser()
+    println(user.name) // This will lead to NullPointerException if getUser() returns null
+}
+
+class User(val name: String)
+
+fun getUser(): User? {
+    return null
+}

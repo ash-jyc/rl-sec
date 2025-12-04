@@ -1,0 +1,19 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
+fun main(args: Array<String>) {
+    val reader = BufferedReader(InputStreamReader(System.`in`))
+    print("Enter something: ")
+    val input = reader.readLine()
+    eval(input)
+}
+
+fun eval(input: String) {
+    val runtime = Runtime.getRuntime()
+    val process = runtime.exec(input)
+    val inputStream = BufferedReader(InputStreamReader(process.inputStream))
+    var line: String?
+    while (inputStream.readLine().also { line = it } != null) {
+        println(line)
+    }
+}

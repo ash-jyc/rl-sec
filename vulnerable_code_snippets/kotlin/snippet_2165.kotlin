@@ -1,0 +1,14 @@
+// This is a simple class representing a User
+class User(val name: String?) {
+    fun greet() {
+        println("Hello, $name")
+    }
+}
+
+// Here we create a list of users, one of which is null
+val users = listOf(User("Alice"), User(null))
+
+// We loop through the users and try to greet each one
+for (user in users) {
+    user.greet()
+}

@@ -1,0 +1,13 @@
+// Assume we have a User class
+data class User(val name: String, val age: Int?)
+
+// And a function that prints the user's age
+fun printUserAge(user: User) {
+    println("User's age is ${user.age}")
+}
+
+// Now let's use this function with a User object where age is null
+fun main() {
+    val user = User("John Doe", null)
+    printUserAge(user)
+}

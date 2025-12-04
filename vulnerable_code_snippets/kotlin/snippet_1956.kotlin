@@ -1,0 +1,13 @@
+fun main(args: Array<String>) {
+    val userInput = readLine()
+    val userObject = User(userInput)
+    println(userObject.name)
+}
+
+class User(val name: String?) {
+    init {
+        if (name == null) {
+            throw IllegalArgumentException("Name cannot be null")
+        }
+    }
+}

@@ -1,0 +1,12 @@
+class MyClass {
+    lateinit var myVariable: String
+
+    fun printMyVariable() {
+        println(myVariable)
+    }
+}
+
+fun main() {
+    val myObject = MyClass()
+    myObject.printMyVariable()
+}

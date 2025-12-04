@@ -1,0 +1,32 @@
+import java.util.*
+
+class BankAccount(private var balance: Int) {
+    @Throws(InterruptedException::class)
+    fun withdraw(amount: Int) {
+        val lock = Any()
+        synchronized(lock) {
+            if (balance >= amount) {
+                balance -= amount
+                println("Withdrawal successful. New balance: $balance")
+            } else {
+                println("Insufficient funds.")
+            }
+            Thread.sleep(10000) // Possible vulnerability point
+        }
+    }
+}
+
+fun main() {
+    val account = BankAccount(100)
+    val random = Random()
+    while (true) {
+        Thread {
+            try {
+                account.withdraw(random.nextInt(20))
+            } catch (e: InterruptedException) {
+                e.printStackTrace()
+            }
+        }.start()
+        Thread.sleep(500)
+    }
+}

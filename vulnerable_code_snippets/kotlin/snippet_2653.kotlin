@@ -1,0 +1,26 @@
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.SQLException
+
+fun main(args: Array<String>) {
+    val username = args[0]
+    val password = args[1]
+    val connectionProps = Properties()
+    connectionProps["user"] = username
+    connectionProps["password"] = password
+    val conn: Connection
+    try {
+        conn = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/testdb",
+            connectionProps
+        )
+        val sql = "SELECT * FROM users WHERE username='$username' AND password='$password'"
+        val statement = conn.createStatement()
+        val resultSet = statement.executeQuery(sql)
+        while (resultSet.next()) {
+            println("User found: ${resultSet.getString("username")}")
+        }
+    } catch (e: SQLException) {
+        e.printStackTrace()
+    }
+}

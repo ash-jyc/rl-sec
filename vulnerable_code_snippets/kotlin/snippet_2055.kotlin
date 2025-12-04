@@ -1,0 +1,19 @@
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.ResultSet
+import java.sql.Statement
+
+fun main(args: Array<String>) {
+    val username = args[0]
+    val password = args[1]
+    
+    val connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", "root", "password")
+    val statement = connection.createStatement()
+
+    // Vulnerable Code: Directly using user input in SQL query
+    val resultSet = statement.executeQuery("SELECT * FROM users WHERE username='$username' AND password='$password'")
+
+    while (resultSet.next()) {
+        println("User found: ${resultSet.getString("username")}")
+    }
+}

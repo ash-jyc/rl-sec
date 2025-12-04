@@ -1,0 +1,10 @@
+class MyClass {
+    fun myFunction() {
+        println("This is a function")
+    }
+}
+
+fun main(args: Array<String>) {
+    var obj: MyClass? = null // This object is null
+    obj.myFunction() // This will cause a null pointer exception
+}

@@ -1,0 +1,9 @@
+data class User(val name: String?)
+
+fun main() {
+    val user1 = User("Alice")
+    val user2 = User(null)
+
+    println(user1.name.length) // This will work fine
+    println(user2.name.length) // This will throw NullPointerException
+}

@@ -1,0 +1,11 @@
+class User(val name: String, val age: Int?)  // 'age' could be null
+
+fun greetUser(user: User) {
+    println("Hello, ${user.name}")
+    println("Your age is ${user.age}")  // This line can throw NullPointerException if 'age' is null
+}
+
+fun main() {
+    val user = User("John Doe", null)
+    greetUser(user)
+}

@@ -1,0 +1,4 @@
+fun main(args: Array<String>) {
+    var notNullVariable: String = "Hello World"
+    notNullVariable = null // This line will cause a compilation error
+}

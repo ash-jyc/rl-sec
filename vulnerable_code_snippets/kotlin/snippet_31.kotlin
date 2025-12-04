@@ -1,0 +1,23 @@
+import java.util.*
+
+abstract class Animal(val name: String)
+data class Dog(val breed: String): Animal(breed)
+data class Cat(val color: String): Animal(color)
+
+fun main() {
+    val animalList: MutableList<Animal> = LinkedList()
+    animalList.add(Dog("Bulldog"))
+    animalList.add(Cat("Black"))
+
+    for (animal in animalList) {
+        if (animal is Dog) {
+            println("This is a ${animal.name} dog.")
+        } else if (animal is Cat) {
+            println("This is a ${animal.name} cat.")
+        }
+    }
+
+    // This will throw ClassCastException at runtime because we are trying to cast a Cat object to a Dog object
+    val cat = animalList[1] as Dog
+    println("This is a ${cat.name} cat.")
+}

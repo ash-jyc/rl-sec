@@ -1,0 +1,6 @@
+fun main(args: Array<String>) {
+    var bigString = ""
+    for (i in 1..100000) {
+        bigString += "a"
+    }
+}

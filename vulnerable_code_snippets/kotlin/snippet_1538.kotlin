@@ -1,0 +1,8 @@
+import java.util.*
+
+data class User(val name: String, val age: Int?)
+
+fun main() {
+    val user = User("John Doe", null)
+    println("User's age is ${user.age}")
+}

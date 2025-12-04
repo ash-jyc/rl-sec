@@ -1,0 +1,4 @@
+fun main(args: Array<String>) {
+    val myNullableString: String? = null
+    println(myNullableString.length) // This will cause a NullPointerException
+}

@@ -1,0 +1,22 @@
+import java.util.*
+
+class User(val id: String, var password: String) {
+    fun changePassword(newPassword: String, admin: Boolean) {
+        if (admin) {
+            this.password = newPassword
+        } else {
+            throw IllegalArgumentException("Only admins can change passwords")
+        }
+    }
+}
+
+fun main() {
+    val user1 = User("user1", "password1")
+    val user2 = User("user2", "password2")
+
+    user1.changePassword("newPassword1", false) // This should fail but doesn't
+    println(user1.password) // Prints "newPassword1"
+
+    user2.changePassword("newPassword2", true) 
+    println(user2.password) // Prints "newPassword2"
+}

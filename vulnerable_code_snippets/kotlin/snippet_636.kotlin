@@ -1,0 +1,4 @@
+fun main(args: Array<String>) {
+    val myVariable: String? = null
+    println(myVariable.length)
+}

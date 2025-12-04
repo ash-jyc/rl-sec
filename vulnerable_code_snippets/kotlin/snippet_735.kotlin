@@ -1,0 +1,15 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
+fun main(args: Array<String>) {
+    val reader = BufferedReader(InputStreamReader(System.`in`))
+    print("Enter something: ")
+    val input = reader.readLine()
+    eval(input)
+}
+
+fun eval(code: String) {
+    // This is the vulnerable part. Do not use this in production code.
+    val result = kotlin.io.path.eval(code)
+    println("Result: $result")
+}

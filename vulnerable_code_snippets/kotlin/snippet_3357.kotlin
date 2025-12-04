@@ -1,0 +1,13 @@
+fun main(args: Array<String>) {
+    val list = ArrayList<Any>()
+    list.add("Hello")
+    list.add(123)
+
+    for (item in list) {
+        if (item is String) {
+            println(item.length) // This will work fine
+        } else if (item is Int) {
+            println(item.toString()) // This will throw ClassCastException
+        }
+    }
+}

@@ -1,0 +1,14 @@
+class User(val name: String, val age: Int?)
+
+fun main() {
+    val user1 = User("Alice", 25)
+    val user2 = User("Bob", null)
+
+    println(user1.name)
+    println(user2.age?.toString()) // This will throw NullPointerException if user2.age is null
+
+    val nonUser: Any = "Not a User"
+    val user3 = nonUser as User // This will throw ClassCastException if nonUser is not a User
+
+    println(user3.name)
+}

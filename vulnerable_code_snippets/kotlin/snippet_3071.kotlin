@@ -1,0 +1,10 @@
+fun main(args: Array<String>) {
+    val myObject: MyClass? = null
+    myObject?.myFunction()
+}
+
+class MyClass {
+    fun myFunction() {
+        println("Hello World")
+    }
+}

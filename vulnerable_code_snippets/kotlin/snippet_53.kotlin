@@ -1,0 +1,12 @@
+data class User(val name: String, val age: Int?)
+
+fun main() {
+    val user1 = User("Alice", 25)
+    val user2 = User("Bob", null)
+
+    println(user1.name)
+    println(user2.name)
+
+    println(user1.age?.plus(1))
+    println(user2.age?.plus(1))
+}

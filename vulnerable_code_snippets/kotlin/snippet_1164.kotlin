@@ -1,0 +1,9 @@
+fun main(args: Array<String>) {
+    val input = readLine()?.toInt() ?: 0
+    val buffer = ByteArray(1024)
+    if (input > 0 && input <= buffer.size) {
+        for (i in 0 until input) {
+            buffer[i] = (Math.random() * 256).toByte()
+        }
+    }
+}

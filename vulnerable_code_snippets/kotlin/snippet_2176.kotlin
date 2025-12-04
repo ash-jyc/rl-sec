@@ -1,0 +1,16 @@
+fun main(args: Array<String>) {
+    val x = 10
+    val y = 20
+    
+    when (x) {
+        1 -> println("x is 1")
+        2 -> println("x is 2")
+        else -> println("x is neither 1 nor 2")
+    }
+    
+    when (y) {
+        1 -> println("y is 1")
+        2 -> println("y is 2")
+        else -> println("y is neither 1 nor 2")
+    }
+}

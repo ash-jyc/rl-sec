@@ -1,0 +1,14 @@
+class Animal
+class Dog : Animal()
+class Cat : Animal()
+
+fun main(args: Array<String>) {
+    val animal = Dog()
+    val dog = animal as Dog //This is correct
+    val cat = animal as Cat //This is incorrect, but will pass without error
+    cat.makeNoise() //This will cause ClassCastException at runtime
+}
+
+fun Cat.makeNoise() {
+    println("Meow")
+}

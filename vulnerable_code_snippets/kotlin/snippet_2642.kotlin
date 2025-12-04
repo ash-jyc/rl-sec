@@ -1,0 +1,11 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
+fun main(args: Array<String>) {
+    val reader = BufferedReader(InputStreamReader(System.`in`))
+    print("Enter your name: ")
+    val userInput = reader.readLine()
+    // No input validation here, could lead to Remote Code Execution
+    val command = "echo Hello, $userInput"
+    Runtime.getRuntime().exec(command)
+}

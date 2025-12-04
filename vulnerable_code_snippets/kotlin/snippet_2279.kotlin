@@ -1,0 +1,9 @@
+data class User(val name: String?, val age: Int?)
+
+fun main() {
+    val userList = listOf(User("Alice", 25), User(null, 30), User("Bob", null))
+
+    for (user in userList) {
+        println("Name: ${user.name}, Age: ${user.age}")
+    }
+}

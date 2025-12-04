@@ -1,0 +1,13 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
+fun main(args: Array<String>) {
+    val runtime = Runtime.getRuntime()
+    val process = runtime.exec("ls")
+    val inputStream = BufferedReader(InputStreamReader(process.inputStream))
+
+    var s: String?
+    while (inputStream.readLine().also { s = it } != null) {
+        println(s)
+    }
+}

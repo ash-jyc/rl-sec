@@ -1,0 +1,7 @@
+class BaseClass {}
+class DerivedClass : BaseClass() {}
+
+fun main(args: Array<String>) {
+    val base: BaseClass = DerivedClass()
+    val derived: DerivedClass = base as DerivedClass // Unchecked cast here
+}

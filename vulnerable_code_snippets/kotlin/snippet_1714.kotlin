@@ -1,0 +1,9 @@
+fun main(args: Array<String>) {
+    val input = readLine()?.toIntOrNull()
+    try {
+        val result = 10 / input!!
+        println("Result: $result")
+    } catch (e: Exception) {
+        println("An error occurred: ${e.message}")
+    }
+}

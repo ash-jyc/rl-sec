@@ -1,0 +1,6 @@
+fun main(args: Array<String>) {
+    val user1 = User("John", null)
+    println(user1.age)
+}
+
+class User(val name: String, val age: Int?)

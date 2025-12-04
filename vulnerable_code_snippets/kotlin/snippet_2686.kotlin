@@ -1,0 +1,12 @@
+import java.io.File
+
+fun main(args: Array<String>) {
+    val filePath = "sensitive_data.txt"
+    try {
+        val fileContent = File(filePath).readText()
+        println("File content: $fileContent")
+    } catch (e: Exception) {
+        // Just prints the error message without rethrowing it
+        println("Error reading file: ${e.message}")
+    }
+}

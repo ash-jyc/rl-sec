@@ -1,0 +1,13 @@
+open class Animal(val name: String)
+class Dog(name: String) : Animal(name)
+class Cat(name: String) : Animal(name)
+
+fun main() {
+    val animal = Dog("Rex")
+    val dog = animal as Dog // This is safe because animal is actually a Dog
+    println(dog.name)
+
+    val animal2 = Cat("Whiskers")
+    val dog2 = animal2 as Dog // This will throw a ClassCastException at runtime because animal2 is actually a Cat
+    println(dog2.name)
+}

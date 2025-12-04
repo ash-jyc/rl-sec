@@ -1,0 +1,12 @@
+class MyClass {
+    var myVariable: String? = null
+
+    fun myFunction() {
+        println(myVariable?.length)
+    }
+}
+
+fun main() {
+    val myObject = MyClass()
+    myObject.myFunction()
+}

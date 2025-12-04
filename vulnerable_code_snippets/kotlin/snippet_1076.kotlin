@@ -1,0 +1,6 @@
+data class User(val name: String?)
+
+fun main() {
+    val user = User(null)
+    println(user.name.length) // This will throw a NullPointerException
+}

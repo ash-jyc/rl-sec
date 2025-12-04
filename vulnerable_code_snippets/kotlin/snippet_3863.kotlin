@@ -1,0 +1,12 @@
+class MyClass {
+    var myObject: MyObject? = null
+
+    fun accessMyObject() {
+        myObject?.doSomething()
+    }
+}
+
+fun main(args: Array<String>) {
+    val myClass = MyClass()
+    myClass.accessMyObject()
+}

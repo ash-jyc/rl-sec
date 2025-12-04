@@ -1,0 +1,10 @@
+fun main(args: Array<String>) {
+    val myObject: MyClass? = null
+
+    when (myObject) {
+        is MyClass -> println("This will never be printed.")
+        null -> println("This will always be printed.")
+    }
+}
+
+class MyClass

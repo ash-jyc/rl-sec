@@ -1,0 +1,15 @@
+import java.lang.reflect.InvocationTargetException
+
+fun main(args: Array<String>) {
+    val userInput = "println(\"Hello, World!\")"
+    try {
+        eval(userInput)
+    } catch (e: InvocationTargetException) {
+        println("Error: ${e.targetException.message}")
+    }
+}
+
+fun eval(code: String) {
+    val engine: ScriptEngine = ScriptEngineManager().getEngineByExtension("kts")
+    engine.eval(code)
+}

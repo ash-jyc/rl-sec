@@ -1,0 +1,11 @@
+import java.io.File
+
+fun main() {
+    try {
+        val file = File("non-existing-file.txt")
+        println(file.readText())
+    } catch (e: Exception) {
+        println("An error occurred while reading the file: ${e.message}")
+    }
+    println("Program continues running...")
+}

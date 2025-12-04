@@ -1,0 +1,13 @@
+fun main(args: Array<String>) {
+    val myClass = MyClass()
+    myClass.doSomething("some string")
+}
+
+class MyClass {
+    fun doSomething(input: String) {
+        if (input.isEmpty()) {
+            throw Exception("Input cannot be empty")
+        }
+        println("Processing input: $input")
+    }
+}

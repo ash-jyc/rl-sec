@@ -1,0 +1,16 @@
+open class Animal(val name: String)
+class Dog(name: String) : Animal(name)
+class Cat(name: String) : Animal(name)
+
+fun main() {
+    val animalList: List<Animal> = listOf(Dog("Bobby"), Cat("Sally"))
+    for (animal in animalList) {
+        if (animal is Dog) {
+            val dog = animal as Dog // Unchecked cast here - this will work fine
+            println("${dog.name} is a dog")
+        } else if (animal is Cat) {
+            val cat = animal as Cat // Unchecked cast here - this will always succeed
+            println("${cat.name} is a cat")
+        }
+    }
+}

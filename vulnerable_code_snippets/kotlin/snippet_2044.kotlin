@@ -1,0 +1,5 @@
+fun main(args: Array<String>) {
+    val x: Any = "123"
+    val y: Int? = x as? Int // This will throw ClassCastException at runtime because we're trying to cast String to Int
+    println(y)
+}

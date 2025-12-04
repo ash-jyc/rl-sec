@@ -1,0 +1,38 @@
+import java.util.*
+
+fun main(args: Array<String>) {
+    val scanner = Scanner(System.`in`)
+    print("Enter your expression: ")
+    val input = scanner.nextLine()
+    try {
+        println("Result: ${eval(input)}")
+    } catch (e: Exception) {
+        println("Invalid expression")
+    }
+}
+
+fun eval(expr: String): Double {
+    return object : Any() {
+        val value = expr.execute()
+    }.value
+}
+
+private fun String.execute(): Double {
+    val stack = Stack<Double>()
+    this.split(" ").forEach {
+        when (it) {
+            "+" -> stack.push(stack.pop() + stack.pop())
+            "-" -> {
+                val subtrahend = stack.pop()
+                stack.push(stack.pop() - subtrahend)
+            }
+            "*" -> stack.push(stack.pop() * stack.pop())
+            "/" -> {
+                val divisor = stack.pop()
+                stack.push(stack.pop() / divisor)
+            }
+            else -> stack.push(it.toDouble())
+        }
+    }
+    return stack.pop()
+}

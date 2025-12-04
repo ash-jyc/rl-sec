@@ -1,0 +1,8 @@
+fun main(args: Array<String>) {
+    val x = 5
+    when (x) {
+        1 -> println("One")
+        2 -> println("Two")
+        else -> println("Unknown")
+    }
+}

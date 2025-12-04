@@ -1,0 +1,7 @@
+fun main(args: Array<String>) {
+    val user1 = User("John", null)
+    println(user1.address?.street)
+}
+
+data class User(val name: String, val address: Address?)
+data class Address(val street: String)

@@ -1,0 +1,6 @@
+fun main(args: Array<String>) {
+    val user = User("John", null)
+    println(user.name.length)
+}
+
+data class User(val name: String?, val address: String?)

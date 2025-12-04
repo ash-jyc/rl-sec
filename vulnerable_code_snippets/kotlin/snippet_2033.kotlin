@@ -1,0 +1,14 @@
+// This is a simple class representing a User
+class User(val name: String?) {
+    fun printName() {
+        println("User Name: $name")
+    }
+}
+
+fun main() {
+    val user1 = User("John Doe")
+    val user2 = User(null)
+
+    user1.printName() // This will print "User Name: John Doe"
+    user2.printName() // This will throw a NullPointerException
+}

@@ -1,0 +1,6 @@
+fun main(args: Array<String>) {
+    val buffer = Array<Int>(10) { 0 }
+    for (i in 0..15) { // This will cause a buffer overflow
+        buffer[i] = i // Accessing out of bounds memory
+    }
+}

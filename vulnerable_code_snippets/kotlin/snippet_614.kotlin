@@ -1,0 +1,31 @@
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.SQLException
+
+object Database {
+    private val dbUrl = "jdbc:mysql://localhost:3306/mydatabase"
+    private val dbUser = "root"
+    private val dbPassword = "password"
+
+    fun getData(userInput: String): List<String> {
+        val data = mutableListOf<String>()
+        var conn: Connection? = null
+        try {
+            conn = DriverManager.getConnection(dbUrl, dbUser, dbPassword)
+            val stmt = conn.createStatement()
+            val rs = stmt.executeQuery("SELECT * FROM users WHERE username='$userInput'")
+            while (rs.next()) {
+                data.add(rs.getString("username"))
+            }
+        } catch (e: SQLException) {
+            e.printStackTrace()
+        } finally {
+            try {
+                conn?.close()
+            } catch (se: SQLException) {
+                se.printStackTrace()蜜
+            }
+        }
+        return data
+    }
+}

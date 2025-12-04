@@ -1,0 +1,28 @@
+open class Animal {
+    open fun sound() {
+        println("Animal makes sound")
+    }
+}
+
+class Dog : Animal() {
+    override fun sound() {
+        println("Dog barks")
+    }
+}
+
+fun main(args: Array<String>) {
+    val animal1: Animal = Dog()
+    val animal2: Animal = Animal()
+
+    // This will work fine
+    if (animal1 is Dog) {
+        val dog: Dog = animal1 as Dog
+        dog.sound()
+    }
+
+    // This will throw ClassCastException at runtime
+    if (animal2 is Dog) {
+        val dog: Dog = animal2 as Dog
+        dog.sound()
+    }
+}

