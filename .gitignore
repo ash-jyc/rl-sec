@@ -3,3 +3,7 @@
 **/data/
 codeql*/
 vendor/
+
+# Large JSON files
+diversevul_cwe_cve.json
+diversevul_full.json
